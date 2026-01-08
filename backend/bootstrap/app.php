@@ -23,7 +23,9 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
 
         // Rate limiting
-        $middleware->throttleApi();
+        if (! app()->environment('testing')) {
+            $middleware->throttleApi();
+        }
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
