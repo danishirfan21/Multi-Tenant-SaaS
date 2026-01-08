@@ -1,0 +1,22 @@
+# General
+*.log
+.env
+.env.*
+!.env.example
+
+# Frontend
+/frontend/node_modules
+/frontend/dist
+/frontend/.DS_Store
+/frontend/test-results
+
+# Backend
+/backend/vendor
+/backend/bootstrap/cache
+/backend/storage
+/backend/database/database.sqlite
+composer.phar
+
+# IDE
+.vscode/
+.idea/
